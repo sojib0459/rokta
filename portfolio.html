@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Zosek | Portfolio</title>
+    <!-- Load Tailwind CSS from CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e2e8f0; /* Light text color */
+            scroll-behavior: smooth;
+            /* Update: Use a new high-quality background image with a dark overlay */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549492429-27271d43a758?q=80&w=1920&fit=crop');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #4299e1; /* Blue on hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-800 bg-opacity-70 backdrop-blur-md z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">Mr Zosek</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#about" class="nav-link text-white hover:text-blue-400">About Me</a>
+                <a href="#portfolio" class="nav-link text-white hover:text-blue-400">Portfolio</a>
+                <a href="#skills" class="nav-link text-white hover:text-blue-400">Skills</a>
+                <a href="#contact" class="nav-link text-white hover:text-blue-400">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90">
+            <a href="#about" class="block py-3 px-4 text-white hover:bg-gray-700">About Me</a>
+            <a href="#portfolio" class="block py-3 px-4 text-white hover:bg-gray-700">Portfolio</a>
+            <a href="#skills" class="block py-3 px-4 text-white hover:bg-gray-700">Skills</a>
+            <a href="#contact" class="block py-3 px-4 text-white hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header Section (Home) -->
+    <header id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-16">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Hello, I'm Mr Zosek</h1>
+            <p class="text-xl md:text-2xl text-gray-400">A passionate Animator and Game Developer creating engaging visual experiences.</p>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 md:py-32 px-4 container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">About Me</h2>
+        <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl max-w-3xl mx-auto">
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                I am a dedicated animator and game developer with a strong focus on creating captivating animations for game characters, environments, and visual effects. My goal is to build immersive and visually stunning worlds that players love to explore. I thrive on bringing creative ideas to life through movement and design.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                My journey began with a fascination for how animation can tell stories and evoke emotions. This passion drives me to constantly learn and improve my craft, ensuring every project I work on is executed with precision and a unique creative flair. I am excited to share my work on GIPHY and connect with a wider community.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 md:py-32 px-4 container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- GIF Image 1: Mangoes Falling -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="tree vs mango.gif" alt="A whimsical animation of mangoes falling from a tree." class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Mangoes Falling from a Tree</h3>
+                <p class="text-gray-400">A short, engaging animation of mangoes falling from a tree, perfect for a game environment.</p>
+            </div>
+
+            <!-- GIF Image 2: Sword with Lightning -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="top1.gif" alt="A sword with a lightning effect." class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Sword with Lightning</h3>
+                <p class="text-gray-400">A dynamic GIF showing a sword with a striking lightning effect, perfect for a game's special attack.</p>
+            </div>
+
+            <!-- GIF Image 3: War Robot -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="New Project (18).gif" alt="War Robot" class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">War Robot</h3>
+                <p class="text-gray-400">This is a powerful and detailed 3D model of a war robot. Its worn metal texture and aggressive design make it an ideal main character or boss for an action game.</p>
+            </div>
+
+            <!-- GIF Image 4: Spinning Game Coin -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="New Project (4).gif" alt="A spinning game coin." class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Spinning Game Coin</h3>
+                <p class="text-gray-400">A classic spinning coin animation, a staple for game currency and collectibles.</p>
+            </div>
+
+            <!-- GIF Image 5: Strategically Designed Basket -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="Basket.gif" alt="Strategically Designed Basket" class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Strategically Designed Basket</h3>
+                <p class="text-gray-400">This basket was designed for collecting items within a game. Its robust structure and bright color make it easily identifiable for the player.</p>
+            </div>
+
+            <!-- GIF Image 6: Lightning VFX -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="biddut (1) (1).gif" alt="Lightning VFX" class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Lightning VFX</h3>
+                <p class="text-gray-400">This is a dynamic lightning visual effect, which can be used for special attacks or spells in a game. Its realistic animation provides a more engaging experience for the player.</p>
+            </div>
+
+            <!-- GIF Image 7: Block Character Running -->
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg transition-transform hover:scale-105">
+                <img src="New Project (11).gif" alt="Block Character Running" class="rounded-xl mb-4 w-full h-auto">
+                <h3 class="text-2xl font-semibold mb-2 text-white">Block Character Running</h3>
+                <p class="text-gray-400">This is a running animation for a 3D block character, which can be used for an action or adventure game. The animation highlights the character's speed and power.</p>
+            </div>
+            
+            <!-- Add more work samples here following the same structure -->
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 md:py-32 px-4 container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">Skills</h2>
+        <div class="max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-300">
+            <ul class="list-disc list-inside space-y-2">
+                <li>Character Animation</li>
+                <li>Game Asset Creation</li>
+                <li>Visual Effects (VFX)</li>
+                <li>2D and 3D Modeling</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Unity Game Engine</li>
+                <li>Adobe After Effects</li>
+                <li>Blender</li>
+                <li>Adobe Photoshop</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 px-4 container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">Contact</h2>
+        <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl max-w-xl mx-auto text-center">
+            <p class="text-lg text-gray-300 mb-6">Let's create something amazing together. Feel free to get in touch!</p>
+            <a href="mailto:your_email@example.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                Email Me
+            </a>
+            <p class="text-sm text-gray-500 mt-4">drezondars@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 text-center text-gray-500">
+        <p>&copy; 2024 Mr Zosek. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
